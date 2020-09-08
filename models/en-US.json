@@ -1,0 +1,88 @@
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "rocket elevator",
+          "intents": [
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "Elevators",
+                  "slots": [],
+                  "samples": [
+                      "elevators"
+                  ]
+              },
+              {
+                  "name": "Elevators_stop",
+                  "slots": [],
+                  "samples": [
+                      "elevators stop"
+                  ]
+              },
+              {
+                  "name": "Batteries",
+                  "slots": [],
+                  "samples": [
+                      "batteries"
+                  ]
+              },
+              {
+                  "name": "Quote",
+                  "slots": [],
+                  "samples": [
+                      "quotes"
+                  ]
+              },
+              {
+                  "name": "Lead",
+                  "slots": [],
+                  "samples": [
+                      "lead"
+                  ]
+              },
+              {
+                  "name": "elevators_get",
+                  "slots": [
+                      {
+                          "name": "number",
+                          "type": "AMAZON.NUMBER"
+                      }
+                  ],
+                  "samples": [
+                      "status of {number}"
+                  ]
+              },
+              {
+                  "name": "GetRemoteDataIntent",
+                  "slots": [],
+                  "samples": [
+                      "how many people are in space",
+                      "how many people are in space now",
+                      "how many people are currently in space",
+                      "how many humans are in space",
+                      "how many humans are in space now",
+                      "how many humans are currently in space",
+                      "how many astronauts are in space",
+                      "how many astronauts are in space now",
+                      "how many astronauts are currently in space"
+                  ]
+              }
+          ],
+          "types": []
+      }
+  }
+}
