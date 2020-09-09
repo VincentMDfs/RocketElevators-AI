@@ -20,38 +20,70 @@
                   "samples": []
               },
               {
+                "name": "Greetings",
+                "slots": [],
+                "samples": [
+                  "Give me a sitrep",
+                  "Give me an overview",
+                  "How are we doing today",
+                  "What's new today",
+                  "What is the overall status",
+                  "Give me a full report"
+                ]
+            },
+              {
                   "name": "Elevators",
                   "slots": [],
                   "samples": [
-                      "elevators"
+                    "elevators",
+                    "Can you give me a general report",
+                    "How many assets are deployed",
+                    "How many elevators do I have",
+                    "How many elevators are deployed",
+                    "How many elevators are in operation"
                   ]
               },
               {
                   "name": "Elevators_stop",
                   "slots": [],
                   "samples": [
-                      "elevators stop"
+                    "elevators stop",
+                    "How many elevators are being serviced",
+                    "How many elevators are not running",
+                    "How many elevators are not active",
+                    "How many elevators are in intervention",
+                    "Are there any elevators being serviced"
                   ]
               },
               {
                   "name": "Batteries",
                   "slots": [],
                   "samples": [
-                      "batteries"
+                    "batteries",
+                    "How many batteries do we have",
+                    "Across how many cities are we in operations",
+                    "How many batteries are deployed"
                   ]
               },
               {
                   "name": "Quote",
                   "slots": [],
                   "samples": [
-                      "quotes"
+                    "quotes",
+                    "Do we have any quotes in process",
+                    "How many quotes are awaiting process",
+                    "How many quotes are pending"
                   ]
               },
               {
                   "name": "Lead",
                   "slots": [],
                   "samples": [
-                      "lead"
+                    "lead",
+                    "How many leads do I have",
+                    "Do we have any unanswered leads",
+                    "How many leads are in my contact request",
+                    "Any leads"
                   ]
               },
               {
@@ -63,7 +95,10 @@
                       }
                   ],
                   "samples": [
-                      "status of {number}"
+                      "status of {number}",
+                      "What is the status of elevator {number}",
+                      "How is elevator {number} doing",
+                      "Is elevator {number} operational"
                   ]
               },
               {

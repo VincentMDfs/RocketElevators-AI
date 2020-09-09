@@ -41,6 +41,107 @@ const GetRemoteDataHandler = {
   },
 };
 
+const Greetings = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'Greetings';
+  },
+  async handle(handlerInput) {
+    let outputSpeech = '';
+
+    await getRemoteData('https://rocket-elevator-api20200907100916.azurewebsites.net/api/number/elevator')
+      .then((response) => {
+        const data = JSON.parse(response);
+        outputSpeech += `There are currently ${data.count} elevators deployed`;
+      })
+      .catch((err) => {
+        console.log(`ERROR: ${err.message}`);
+        // set an optional error message here
+        // outputSpeech = err.message;
+      });
+
+      await getRemoteData('https://rocket-elevator-api20200907100916.azurewebsites.net/api/number/building')
+      .then((response) => {
+        const data = JSON.parse(response);
+        outputSpeech += ` in the ${data.count} buildings of `;
+      })
+      .catch((err) => {
+        console.log(`ERROR: ${err.message}`);
+        // set an optional error message here
+        // outputSpeech = err.message;
+      });
+
+      await getRemoteData('https://rocket-elevator-api20200907100916.azurewebsites.net/api/number/customer')
+      .then((response) => {
+        const data = JSON.parse(response);
+        outputSpeech += `your ${data.count} customers`;
+      })
+      .catch((err) => {
+        console.log(`ERROR: ${err.message}`);
+        // set an optional error message here
+        // outputSpeech = err.message;
+      });
+
+      await getRemoteData('https://rocket-elevator-api20200907100916.azurewebsites.net/api/number/elevator_stop')
+        .then((response) => {
+          const data = JSON.parse(response);
+          outputSpeech += `Currently, ${data.count} elevators are not in running status and are being serviced`;
+        })
+        .catch((err) => {
+          console.log(`ERROR: ${err.message}`);
+          // set an optional error message here
+          // outputSpeech = err.message;
+        });
+
+        await getRemoteData('https://rocket-elevator-api20200907100916.azurewebsites.net/api/number/battery')
+      .then((response) => {
+        const data = JSON.parse(response);
+        outputSpeech += `${data.count} Batteries are deployed across `;
+      })
+      .catch((err) => {
+        console.log(`ERROR: ${err.message}`);
+        // set an optional error message here
+        // outputSpeech = err.message;
+      });
+        await getRemoteData('https://rocket-elevator-api20200907100916.azurewebsites.net/api/number/city')
+      .then((response) => {
+        const data = JSON.parse(response);
+        outputSpeech += `${data.count} cities`;
+      })
+      .catch((err) => {
+        console.log(`ERROR: ${err.message}`);
+        // set an optional error message here
+        // outputSpeech = err.message;
+      });
+
+      await getRemoteData('https://rocket-elevator-api20200907100916.azurewebsites.net/api/number/quote')
+      .then((response) => {
+        const data = JSON.parse(response);
+        outputSpeech += `On another note you currently have ${data.count} quotes awaiting processing`;
+      })
+      .catch((err) => {
+        console.log(`ERROR: ${err.message}`);
+        // set an optional error message here
+        // outputSpeech = err.message;
+      });
+
+      await getRemoteData('https://rocket-elevator-api20200907100916.azurewebsites.net/api/number/lead')
+      .then((response) => {
+        const data = JSON.parse(response);
+        outputSpeech += `You also have ${data.count} leads in your contact requests`;
+      })
+      .catch((err) => {
+        console.log(`ERROR: ${err.message}`);
+        // set an optional error message here
+        // outputSpeech = err.message;
+      });
+
+    return handlerInput.responseBuilder
+      .speak(outputSpeech)
+      .getResponse();
+  },
+};
+
 const Elevators = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest'
@@ -306,7 +407,8 @@ exports.handler = skillBuilder
     Batteries,
     Quote,
     Lead,
-    Elevators_get
+    Elevators_get,
+    Greetings
   )
   .addErrorHandlers(ErrorHandler)
   .lambda();
