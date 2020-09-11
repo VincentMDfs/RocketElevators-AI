@@ -58,4 +58,7 @@ or any of those queries
                       What is the status of elevator {number}
                       How is elevator {number} doing
                       Is elevator {number} operational
+
+https://youtu.be/I_m5OpQVsu8
+For more practical examples
                   
