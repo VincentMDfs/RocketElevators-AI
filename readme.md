@@ -1,18 +1,61 @@
-# API Starter - Alexa Skill Template
+Week 13 - Artificial Intelligence
 
-This is an Alexa skill template that provides a simple example of a skill that calls an external API. The API used is the [api.open-notify.org API](http://api.open-notify.org/astros.json) which returns a list of the astronauts currently in space.
+This need to be tested using Alexa Developer Console
 
-### Live example
-To try a live example of this skill template, you can enable the [Ground Control Alexa skill](https://www.amazon.com/Dabble-Lab-Ground-Control/dp/B075CWGY1P/ref=sr_1_sc_1?ie=UTF8&qid=1514557483&sr=8-1-spell&keywords=grond+control+alexa+skill). Just say: `Alexa, enable Ground Control` and then `Alexa, open Ground Control`.
+Usage Examples
 
-### Using this template
+Greeting Query
+Ask Rocket Elevators using Give me a full report
+or any of those queries
+                  Give me a sitrep
+                  Give me an overview
+                  How are we doing today
+                  What's new today
+                  What is the overall status
+                  Give me a full report
+                  
+Ask Rocket Elevators using elevators
+or any of those queries
+                    elevators
+                    How many elevators do I have
+                    How many elevators are deployed
+                    How many elevators are in operation
 
-This template uses the [Alexa Skills Kit SDK 2.0 for Node.js](https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs) and was designed to be used with the [Alexa Skills Kit Command-Line Interface](https://developer.amazon.com/docs/smapi/ask-cli-intro.html) (aka: ASK-CLI). After installing the ASK-CLI you can run the following command to setup a new skill project based on this template.
+Ask Rocket Elevators using elevators stop
+or any of those queries
+                    elevators stop
+                    How many elevators are being serviced
+                    How many elevators are not running
+                    How many elevators are not active
+                    How many elevators are in intervention
+                    Are there any elevators being serviced
 
-`$ ask new --url http://skilltemplates.com/templates.json`
+Ask Rocket Elevators using batteries                  
+or any of those queries
+                    batteries
+                    How many batteries do we have
+                    Across how many cities are we in operations
+                    How many batteries are deployed
 
-After running the previous command you'll see of list of templates to choose from. Pick the template named `API Starter`. This will create a new folder named `./api-starter/` all of the code for the template will be located in that folder.
+Ask Rocket Elevators using quotes                     
+or any of those queries
+                    quotes
+                    Do we have any quotes in process
+                    How many quotes are awaiting process
+                    How many quotes are pending
 
-### Video Tutorial
+Ask Rocket Elevators using lead
+or any of those queries
+                    lead
+                    How many leads do I have
+                    Do we have any unanswered leads
+                    How many leads are in my contact request
+                    Any leads
 
-[coming soon]
+Ask Rocket Elevators using elevator ID                    
+or any of those queries
+                      status of {number}
+                      What is the status of elevator {number}
+                      How is elevator {number} doing
+                      Is elevator {number} operational
+                  
